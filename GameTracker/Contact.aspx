@@ -8,23 +8,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4">
-                <div class="panel panel-primary">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Contact Info</h3>
-                    </div>
-                    <div class="panel-body">
-                        <address>
-                            <strong>Tom Tsiliopoulos</strong><br>
-                            1 Toronto Drive<br>
-                            Barrie, ON L9L 1L0<br>
-                            <abbr title="Phone">Tel:</abbr>
-                            (705) 555-5555
-                        </address>
-                    </div>
-                </div>
-
-            </div>
+            
             <div class="col-md-6">
                 
                 <div class="form-group">
