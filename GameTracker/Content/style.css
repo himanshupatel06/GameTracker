@@ -1,6 +1,3 @@
-
-
-
 /*---------------------------------------
    reset, html, and body style              
 -----------------------------------------*/
@@ -308,53 +305,33 @@ header {
 /*---------------------------------------
    Navigation       
 -----------------------------------------*/
+
 /* Navigation Reset */
-.navbar-nav > li > a:hover {
-	background: inherit;
-}
+.navbar-inverse { background-color: #752099}
+.navbar-inverse .navbar-nav>.active>a:hover,.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus { background-color: #FFB029}
+.navbar-inverse .navbar-nav>.active>a,.navbar-inverse .navbar-nav>.open>a,.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover,.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus { background-color: #FFB029}
+.dropdown-menu { background-color: #752099}
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus { background-color: #FFB029}
+.navbar-inverse { background-image: none; }
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus { background-image: none; }
+.navbar-inverse { border-color: #FF470F}
+.navbar-inverse .navbar-brand { color: #C2BD2F}
+.navbar-inverse .navbar-brand:hover { color: #C2BD2F}
+.navbar-inverse .navbar-nav>li>a { color: #E3BE2B}
+.navbar-inverse .navbar-nav>li>a:hover, .navbar-inverse .navbar-nav>li>a:focus { color: #731F96}
+.navbar-inverse .navbar-nav>.active>a,.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:hover, .navbar-inverse .navbar-nav>.open>a:focus { color: #731F96}
+.navbar-inverse .navbar-nav>.active>a:hover, .navbar-inverse .navbar-nav>.active>a:focus { color: #731F96}
+.dropdown-menu>li>a { color: #FFB029}
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus { color: #731F96}
+.navbar-inverse .navbar-nav>.dropdown>a .caret { border-top-color: #999999}
+.navbar-inverse .navbar-nav>.dropdown>a:hover .caret { border-top-color: #FFFFFF}
+.navbar-inverse .navbar-nav>.dropdown>a .caret { border-bottom-color: #999999}
+.navbar-inverse .navbar-nav>.dropdown>a:hover .caret { border-bottom-color: #FFFFFF}
 
-.non-sticky .navbar-nav.navbar-right:last-child {
-	margin-right: 0;
-}
 
-.non-sticky .navbar-nav > li > a {
-	font-size: 25px;
-	padding: 0;
-	padding-left: 5px;
-	padding-top: 2px;
-	color: #333;
-}
-
-/* Sticky Navigation */
-.sticky-navigation {
-	min-height: 75px;
-	-webkit-backface-visibility: hidden;
-   
-}
-
-.sticky-navigation .navbar-header {
-	padding-top: 8px;
-}
-
-.sticky-navigation .main-navigation {
-	padding-top: 13px;
-}
-
-.sticky-navigation .main-navigation .current a {
-	-webkit-backface-visibility: hidden;
-	outline: inherit;
-	position: relative;
-    border-top: 2px solid transparent;
-}
-
-.sticky-navigation .navbar-nav > li > a {
-	font-family: 'Raleway', sans-serif;
-	font-size: 13px;
-	text-transform: uppercase;
-	font-weight: 600;
-	color: #eee;
-    border-top: 2px solid transparent;
-    margin: 2px;
+.link-active{
+    background-color: #F7A05F;
+    
 }
 
 
@@ -702,11 +679,40 @@ footer {
 }
 
 
+/*----------------------------------------
+   Footer             
+------------------------------------------*/
+footer {
+	padding-top: 75px;
+	padding-bottom: 75px;
+}
+
+.copyright {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.social-icons li {
+	display: inline;
+	margin: 2px;
+}
+
+.social-icons li a {
+	font-size: 30px;
+	color: #fff;
+    padding: 10px 10px 7px;
+}
+
+.social-icons li a:hover {
+	text-decoration: none;
+}
+
+
 footer{
 	position: fixed;
 	bottom: 0;
-    margin-bottom: 0px;
-    margin-top:8000px;
+    margin-bottom: 0;
+
 }
 
 @media (max-height:800px){
@@ -716,15 +722,15 @@ footer{
 
 
 .footer-distributed{
-	background-color: #555500;
+	background-color:#752099;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
 	box-sizing: border-box;
 	width: 100%;
 	text-align: left;
 	font: bold 16px sans-serif;
 
-	padding: 10px 05px;
-	margin-top: 0px;
+	padding: 55px 50px;
+	margin-top: 10%;
 }
 
 .footer-distributed .footer-left,
@@ -762,7 +768,7 @@ footer{
 
 .footer-distributed .footer-links a{
 	display:inline-block;
-	line-height: 1;
+	line-height: 1.8;
 	text-decoration: none;
 	color:  inherit;
 }
@@ -776,7 +782,7 @@ footer{
 /* Footer Center */
 
 .footer-distributed .footer-center{
-	width: 20%;
+	width: 35%;
 }
 
 .footer-distributed .footer-center i{

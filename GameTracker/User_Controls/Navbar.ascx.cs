@@ -32,10 +32,10 @@ namespace GameTracker
             switch (Page.Title)
             {
                 case "Home Page":
-                    home.Attributes.Add("class", "active");
+                    home.Attributes.Add("class", "link-active");
                     break;
                 case "Contact":
-                    contact.Attributes.Add("class", "active");
+                    contact.Attributes.Add("class", "link-active");
                     break;
             }
         }
