@@ -10,78 +10,69 @@
 namespace GameTracker {
     
     
-    public partial class Default {
+    public partial class TeamsDetail {
         
         /// <summary>
-        /// Jumbotron control.
+        /// TeamIDTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::GameTracker.User_Controls.Jumbotron Jumbotron;
+        protected global::System.Web.UI.WebControls.TextBox TeamIDTextBox;
         
         /// <summary>
-        /// Game1 control.
+        /// TeamNameTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton Game1;
+        protected global::System.Web.UI.WebControls.TextBox TeamNameTextBox;
         
         /// <summary>
-        /// Jumbotron1 control.
+        /// DescriptionTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::GameTracker.User_Controls.Jumbotron Jumbotron1;
+        protected global::System.Web.UI.WebControls.TextBox DescriptionTextBox;
         
         /// <summary>
-        /// Game2 control.
+        /// MatchesPlayedTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton Game2;
+        protected global::System.Web.UI.WebControls.TextBox MatchesPlayedTextBox;
         
         /// <summary>
-        /// Jumbotron2 control.
+        /// MatchesWonTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::GameTracker.User_Controls.Jumbotron Jumbotron2;
+        protected global::System.Web.UI.WebControls.TextBox MatchesWonTextBox;
         
         /// <summary>
-        /// Game3 control.
+        /// CancelButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton Game3;
+        protected global::System.Web.UI.WebControls.Button CancelButton;
         
         /// <summary>
-        /// Jumbotron3 control.
+        /// SaveButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::GameTracker.User_Controls.Jumbotron Jumbotron3;
-        
-        /// <summary>
-        /// Game4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton Game4;
+        protected global::System.Web.UI.WebControls.Button SaveButton;
     }
 }

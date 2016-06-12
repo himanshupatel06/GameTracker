@@ -14,7 +14,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>GameTracker</RootNamespace>
-    <AssemblyName>COMP2007-S2016-Lesson3B</AssemblyName>
+    <AssemblyName>GameTracker</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
@@ -47,11 +47,21 @@
       <HintPath>..\packages\AspNet.ScriptManager.jQuery.2.2.3\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -71,11 +81,30 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\500_F_96256473_w4jPsMHByd9a0APtnEEN8aB5jgbPu6Gg.jpg" />
+    <Content Include="Assets\blue.jpg" />
+    <Content Include="GamesDetail.aspx" />
     <Content Include="logo.png" />
+    <Content Include="Models\Database.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Database.edmx</DependentUpon>
+      <LastGenOutput>Database.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Database.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Database.edmx</DependentUpon>
+      <LastGenOutput>Database.cs</LastGenOutput>
+    </Content>
     <Content Include="packages.config" />
     <Content Include="Content\style.css" />
     <Content Include="Site.Master" />
     <Content Include="Scripts\jquery-2.2.3.min.map" />
+    <EntityDeploy Include="Models\Database.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Database.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Database.edmx.diagram">
+      <DependentUpon>Database.edmx</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -103,6 +132,8 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Teams.aspx" />
+    <Content Include="TeamsDetail.aspx" />
     <Content Include="User_Controls\Footer.ascx" />
     <Content Include="User_Controls\Jumbotron.ascx" />
     <Content Include="User_Controls\Navbar.ascx" />
@@ -134,6 +165,48 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="GamesDetail.aspx.cs">
+      <DependentUpon>GamesDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GamesDetail.aspx.designer.cs">
+      <DependentUpon>GamesDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Database.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Database.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Game.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Team.cs">
+      <DependentUpon>Database.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Teams.aspx.cs">
+      <DependentUpon>Teams.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Teams.aspx.designer.cs">
+      <DependentUpon>Teams.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TeamsDetail.aspx.cs">
+      <DependentUpon>TeamsDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TeamsDetail.aspx.designer.cs">
+      <DependentUpon>TeamsDetail.aspx</DependentUpon>
+    </Compile>
     <Compile Include="User_Controls\Footer.ascx.cs">
       <DependentUpon>Footer.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -163,6 +236,9 @@
     <Compile Include="Site.Master.designer.cs">
       <DependentUpon>Site.Master</DependentUpon>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
